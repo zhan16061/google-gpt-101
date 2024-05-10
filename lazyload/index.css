@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+div.ad-slot {
+  border-style: dashed;
+  display: block;
+  margin: auto;
+}
+
+div.main-content {
+  /* background-color: lightsteelblue; */
+  margin-top: 125px;
+  overflow: hidden;
+  width: 100%;
+}
+
+div.status-panel {
+  background: white;
+  height: 125px;
+  position: fixed;
+  top: 0;
+  width: 960px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  text-align: center;
+}
+
+table td:not(.slot-name) {
+  background-color: lightsalmon;
+}
+
+table td.activated {
+  background-color: lightgreen;
+}
+
+div.filler-wrap div:nth-child(even) {
+  background-color: #7b809a;
+  height: 100vh;
+  text-align: center;
+  font-size: 20px;
+}
+
+div.filler-wrap div:nth-child(odd) {
+  background-color: #344767;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.filler {
+  background-color: #344767;
+  height: 900vh;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}

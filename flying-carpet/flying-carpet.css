@@ -1,0 +1,77 @@
+div.ad-slot {
+  border: 5px dashed;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+div.main-content {
+  background-color: lightsteelblue;
+  margin-top: 125px;
+  overflow: hidden;
+  width: 100%;
+}
+
+div.status-panel {
+  background: white;
+  height: 125px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  text-align: center;
+}
+
+table td:not(.slot-name) {
+  background-color: lightsalmon;
+}
+
+table td.activated {
+  background-color: lightgreen;
+}
+
+div.ad-slot-2 {
+  border: 5px dashed;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  height: 260px;
+  width: 310px;
+}
+
+.flying-container {
+  min-width: 320px;
+  height: 460px;
+  position: relative !important;
+  visibility: visible !important;
+  overflow: hidden !important;
+}
+
+.flying-clip {
+  top: 0 !important;
+  left: 0 !important;
+  height: 100% !important;
+  width: 320px !important;
+  position: absolute !important;
+  clip: rect(0, auto, auto, 0) !important;
+}
+
+.flying-ad {
+  backface-visibility: hidden !important;
+  transform: translate3d(0px, 0px, 0px) !important;
+  visibility: visible !important;
+  overflow: hidden !important;
+  width: 320px !important;
+  height: 100% !important;
+  position: fixed !important;
+  top: 20% !important;
+}

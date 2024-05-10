@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lazy loading example</title>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./index.css" class="css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="main-content">
+      <div id="div-1" class="ad-slot" style="height: 90px; width: 728px;">
+        <script>
+          googletag.cmd.push(function () { googletag.display('div-1'); });
+        </script>
+      </div>
+      <div class="filler-wrap">
+        <div>
+          1. height:100vh
+        </div>
+        <div>
+          <p>2. height:100vh</p>
+          <p>這裡個區塊出現時，代表距離 slot2 為 5 viewports，所以 slot2 狀態變成 Fetched</p>
+        </div>
+        <div>
+          3. height:100vh
+        </div>
+        <div>
+          4. height:100vh
+        </div>
+        <div>
+          <p>5. height:100vh</p>
+          <p>滑這裡個區塊出現時，代表距離 slot2 為 2 viewports，所以 slot2 狀態變成 Rendered</p>
+        </div>
+        <div>
+          6. height:100vh
+        </div>
+      </div>
+      <div id="div-2" class="ad-slot" style="height: 90px; width: 728px;">
+        <script>
+          googletag.cmd.push(function () { googletag.display('div-2'); });
+        </script>
+      </div>
+
+      <!-- 9 viewport tall div to place next slot 12 viewports away. -->
+      <div class="filler">
+        7. height:900vh
+      </div>
+      <div id="div-3" class="ad-slot" style="height: 90px; width: 728px;">
+        <script>
+          googletag.cmd.push(function () { googletag.display('div-3'); });
+        </script>
+      </div>
+    </div>
+
+    <div class="status-panel">
+      <table>
+        <tr>
+          <th>Ad Slot</th>
+          <th>Fetched?</th>
+          <th>Rendered?</th>
+        </tr>
+        <tr>
+          <td class="slot-name">Ad Slot 1</td>
+          <td id="div-1-fetched">No</td>
+          <td id="div-1-rendered">No</td>
+        </tr>
+        <tr>
+          <td class="slot-name">Ad Slot 2</td>
+          <td id="div-2-fetched">No</td>
+          <td id="div-2-rendered">No</td>
+        </tr>
+        <tr>
+          <td class="slot-name">Ad Slot 3</td>
+          <td id="div-3-fetched">No</td>
+          <td id="div-3-rendered">No</td>
+        </tr>
+      </table>
+      <p>
+        Scroll the container below to lazily load the ad slots.
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
